@@ -1,4 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body{
     background-color: black;
-    color: white;
+}
+
+.others{
+    height: calc(100vh - 60px);
+}
+.tasks{
+    height: calc(100vh - 60px);
 }

@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tod-Do</title>
 </head>
+
 <body>
+    <main class="grid grid-cols-12 grid-rows-1">
+        <!-- Side Bar -->
+        <div class="sidebar bg-white col-span-2 h-screen box-border ">
+            <!-- Brand -->
+            <div class="brand border-b-4 border-red-300 p-4 h-[60px]">Koçbaşı</div>
+            <div class="others border-r-2 border-red-300 flex flex-col">
+                <!-- All / TODAY / PRIORITY / COMPLATE -->
+                <div class="border-2 border-blue-300 h-[20%] flex gap-5 flex-wrap box-border p-5 justify-center content-center">
+                    <div class="w-[40%] h-auto bg-orange-400  text-center ">All</div>
+                    <div class="w-[40%] bg-orange-400 text-center ">Today</div>
+                    <div class="w-[40%] bg-orange-400 text-center ">Priority</div>
+                    <div class="w-[40%] bg-orange-400  text-center">Complited</div>
+                </div>
+                <!-- Project -->
+                <div class="border-2 border-red-300 h-[70%]">
+                    <h2>PROJECTS</h2>
+                    <div class="projects">
+                        <p> <input type="checkbox">Lorem ipsum dolor sit.</p>
+                        <p> <input type="checkbox">Reiciendis nihil dolorum voluptatem.</p>
+                        <p> <input type="checkbox">Vel et eaque explicabo.</p>
+                    </div>
+                </div>
+                <!--Add Project -->
+                <div class="border-2 border-green-300 h-[10%]">
+                    <p class="text-right"><button class="bg-red-950 text-white">+</button> New Project</p>
+                </div>
+            </div>
+        </div>
+        <div class="task-section col-span-10">
+            <div class=" border-b-4 border-red-300 p-4 text-white h-[60px] flex gap-5">
+                <p>edit</p>
+                <p>delete</p>
+            </div>
+            <div class="tasks border-l-2 border-red-300">
+
+            </div>
+        </div>
+    </main>
     <script src="main.js"></script>
 </body>
+
 </html>

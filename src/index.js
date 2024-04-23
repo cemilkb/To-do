@@ -1,3 +1,13 @@
-import './input.css'
+import '../dist/output.css'
 
-document.body.innerHTML = "<h1>ANANANANNA</h1>"
+const bu = document.querySelector(".bu")
+
+let ne = document.createElement("h1")
+
+ne.textContent = "SAANNE"
+
+ne.classList.add("text-red-700")
+bu.appendChild(ne)
+
+
+
