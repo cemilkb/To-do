@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 
-body{
-    background-color: black;
+
+.others {
+    height: calc(100vh - 60px);
 }
 
-.others{
+.tasks {
     height: calc(100vh - 60px);
 }
-.tasks{
-    height: calc(100vh - 60px);
+
+*::-webkit-scrollbar {
+    width: 10px;
+    padding: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(234, 149, 4);
+    border-radius: 10px;
 }

@@ -7,44 +7,169 @@
     <title>Tod-Do</title>
 </head>
 
-<body>
-    <main class="grid grid-cols-12 grid-rows-1">
+<body class="overflow-hidden">
+    <main class="grid grid-cols-12 grid-rows-1 overflow-hidden h-screen">
+
         <!-- Side Bar -->
-        <div class="sidebar bg-white col-span-2 h-screen box-border ">
+
+        <div class="sidebar bg-emerald-400 col-span-2 h-screen box-border  ">
             <!-- Brand -->
-            <div class="brand border-b-4 border-red-300 p-4 h-[60px]">Koçbaşı</div>
-            <div class="others border-r-2 border-red-300 flex flex-col">
-                <!-- All / TODAY / PRIORITY / COMPLATE -->
-                <div class="border-2 border-blue-300 h-[20%] flex gap-5 flex-wrap box-border p-5 justify-center content-center">
-                    <div class="w-[40%] h-auto bg-orange-400  text-center ">All</div>
-                    <div class="w-[40%] bg-orange-400 text-center ">Today</div>
-                    <div class="w-[40%] bg-orange-400 text-center ">Priority</div>
-                    <div class="w-[40%] bg-orange-400  text-center">Complited</div>
+            <div class=" p-4 h-[60px] cursor-default">Koçbaşı</div>
+
+            <div class="others flex flex-col">
+
+                <!-- All / Today / Priority / Complate -->
+
+                <div class="  h-[20%] flex gap-5 flex-wrap box-border p-5 justify-center content-center">
+                    <div class="w-[40%] h-auto bg-orange-400  text-center cursor-pointer ">All</div>
+                    <div class="w-[40%] bg-orange-400 text-center cursor-pointer ">Today</div>
+                    <div class="w-[40%] bg-orange-400 text-center  cursor-pointer">Priority</div>
+                    <div class="w-[40%] bg-orange-400  text-center cursor-pointer">Complited</div>
                 </div>
+
                 <!-- Project -->
-                <div class="border-2 border-red-300 h-[70%]">
-                    <h2>PROJECTS</h2>
-                    <div class="projects">
-                        <p> <input type="checkbox">Lorem ipsum dolor sit.</p>
-                        <p> <input type="checkbox">Reiciendis nihil dolorum voluptatem.</p>
-                        <p> <input type="checkbox">Vel et eaque explicabo.</p>
-                    </div>
+
+                <h2 class="cursor-default">PROJECTS</h2>
+                <div class="overflow-y-scroll h-[70%]">
+
+                    <p class="cursor-pointer"> <input type="checkbox">Lorem ipsum dolor sit.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Reiciendis nihil dolorum voluptatem.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+                    <p class="cursor-pointer"> <input type="checkbox">Vel et eaque explicabo.</p>
+
                 </div>
+
                 <!--Add Project -->
-                <div class="border-2 border-green-300 h-[10%]">
-                    <p class="text-right"><button class="bg-red-950 text-white">+</button> New Project</p>
+
+                <div class="  h-[10%] flex  content-center justify-end  pr-3">
+                    <button class="bg-emerald-950 text-white p-2 mb-auto mt-auto rounded-full rounded-r">+</button>
+                    <p
+                        class=" flex mt-auto mb-auto cursor-pointer bg-emerald-600 px-2 py-2 text-white rounded-full rounded-l">
+                        New Project</p>
                 </div>
-            </div>
-        </div>
-        <div class="task-section col-span-10">
-            <div class=" border-b-4 border-red-300 p-4 text-white h-[60px] flex gap-5">
-                <p>edit</p>
-                <p>delete</p>
-            </div>
-            <div class="tasks border-l-2 border-red-300">
 
             </div>
         </div>
+
+        <!-- Right Section -->
+
+        <div class="rigth-section col-span-10 bg-emerald-300 h-screen box-border ">
+            <div class=" h-[60px] flex gap-5 items-center justify-end p-4">
+                <p class=" cursor-pointer">edit</p>
+                <p class=" cursor-pointer">delete</p>
+            </div>
+            <!-- Project Name And Count Section -->
+            <div class="project border-b-2  border-teal-500/[.50]  grid grid-cols-2 p-2 gap-4 box-border">
+                <!-- Project Name -->
+                <h2 class="text-slate-900 cursor-default text-3xl">Project Name</h2>
+                <!-- Count -->
+                <p class="task-count text-slate-900 text-end text-3xl cursor-default">3</p>
+                <!-- Complated Count -->
+                <div class="complate-count text-slate-900 cursor-default">1 Complated
+                    <button class="text-red-600">-Clear</button>
+                </div>
+                <!-- Hide -->
+                <p class="hide text-slate-900 text-end cursor-pointer">Hide</p>
+            </div>
+
+
+            <!-- Tasks Section -->
+
+            <div class="tasks-section overflow-y-scroll h-[70%] box-border px-3">
+
+                <div class="task border-b-2 border-teal-500/[.50] flex flex-col gap-2 p-3 m-auto">
+                    <div class="task-n-box flex itmes-center gap-1 ">
+                        <input type="checkbox" name="" id="">
+                        <p class="text-xl font-semibold">Falan Filan Fasyon</p>
+                    </div>
+                    <div class="summary text-sm">SOMETINGH ABOUT SOMETHING</div>
+                    <div class="task-buttom flex justify-between">
+                        <div class="due-n-project flex gap-2">
+                            <div class="due">Due: <span>20/02/2090</span></div>
+                            <div class="priorty">##Medium</div>
+                        </div>
+
+                        <div class="edit flex gap-2">
+                            <p>edit</p>
+                            <p>delete</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="task border-b-2 border-teal-500/[.50] flex flex-col gap-2 p-3  m-auto">
+                    <div class="task-n-box flex itmes-center gap-1 ">
+                        <input type="checkbox" name="" id="">
+                        <p class="text-xl font-semibold">Falan Filan Fasyon</p>
+                    </div>
+                    <div class="summary text-sm">SOMETINGH ABOUT SOMETHING</div>
+                    <div class="task-buttom flex justify-between">
+                        <div class="due-n-project flex gap-2">
+                            <div class="due">Due: <span>20/02/2090</span></div>
+                            <div class="priorty">##Medium</div>
+                        </div>
+
+                        <div class="edit flex gap-2">
+                            <p>edit</p>
+                            <p>delete</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="task border-b-2 border-teal-500/[.50] flex flex-col gap-2 p-3 ">
+                    <div class="task-n-box flex itmes-center gap-1 ">
+                        <input type="checkbox" name="" id="">
+                        <p class="text-xl font-semibold">Falan Filan Fasyon</p>
+                    </div>
+                    <div class="summary text-sm">SOMETINGH ABOUT SOMETHING</div>
+                    <div class="task-buttom flex justify-between">
+                        <div class="due-n-project flex gap-2">
+                            <div class="due">Due: <span>20/02/2090</span></div>
+                            <div class="priorty">##Medium</div>
+                        </div>
+
+                        <div class="edit flex gap-2">
+                            <p>edit</p>
+                            <p>delete</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="  h-[10%] flex  content-center justify-start  pl-3" id="new-task">
+                <button class="bg-emerald-950 text-white p-2 mb-auto mt-auto rounded-full rounded-r">+</button>
+                <p
+                    class=" flex mt-auto mb-auto cursor-pointer bg-emerald-600 px-2 py-2 text-white rounded-full rounded-l">
+                    New task</p>
+            </div>
+        </div>
+
+        <!-- Dialog-->
+
+        <dialog>
+            
+          </dialog>
     </main>
     <script src="main.js"></script>
 </body>
