@@ -48,8 +48,8 @@ function newTask(d) {
         return option
     }
 
-    for (let i = 0; i < localStorage.length; i++) {
-        project[1].appendChild(option(localKey[i]))
+    for (let i = 0; i < localKey.length; i++) {
+        project[1].appendChild(option(JSON.parse(localStorage[`${localKey[i]}`]).name))
     }
 
     // Options For Priorty
@@ -88,7 +88,7 @@ function newTask(d) {
 
         // Task, Due, Sumamry, Priorty, Project
         addTask(task[1], due[1], summary[1], priority[1], project[1])
-
+        console.log(localKey)
     })
 
 }

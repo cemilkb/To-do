@@ -1,15 +1,15 @@
-import { closestTo } from "date-fns";
+
 import { local } from "./localStorage"
 
 function addTask(task, due, summary, priority, project) {
 
     if (task.value != "" && due.value != "" && summary.value != "" && priority.value != "" && project.value != "") {
         // Getting a wich project
-        let projects = JSON.parse(local[project.value])
+        let projects = JSON.parse(local[`${project.value}$$`])
         let newTasks = projects.tasks
         let pass = true
 
-        //Hata
+        // Error
         newTasks.forEach(e => {
             console.log(e.task)
             if (e.task === task.value) {
@@ -34,7 +34,7 @@ function addTask(task, due, summary, priority, project) {
                 tasks: newTasks
             }
 
-            localStorage.setItem(project.value, JSON.stringify(deneme))
+            localStorage.setItem(`${project.value}$$`, JSON.stringify(deneme))
 
             console.log(newTasks)
 
@@ -44,7 +44,7 @@ function addTask(task, due, summary, priority, project) {
             priority.value = ""
             project.value = ""
         } else {
-            // Mistake Alert
+            // Error Alert
             alert("Bu görev hali hazırda bulunmakta.")
         }
 

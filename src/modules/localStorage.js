@@ -33,19 +33,18 @@ let b = {
 }
 
 
-localStorage.setItem("ananzo", JSON.stringify(all))
-localStorage.setItem("b", JSON.stringify(b))
+localStorage.setItem("denemes$$", JSON.stringify(all))
+localStorage.setItem("deneme$$$", JSON.stringify(b))
 
 let local = localStorage
-
+var regex = /\w*\$\$\w*/g;
 let localKey = []
 
 function keyUpdate() {
     localKey = []
     for (let k in local) {
 
-        if (k != "length" && k != "getItem" && k != "removeItem"
-            && k != "key" && k != "setItem" && k != "clear") {
+        if (regex.test(k)) {
             localKey.push(k)
         }
 
