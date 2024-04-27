@@ -1,4 +1,6 @@
 import { createInput } from "./makeInput"
+import { addProject } from "./addProject"
+
 function newProject(d) {
 
     const dialog = d
@@ -14,6 +16,7 @@ function newProject(d) {
     const add = document.createElement("button")
 
     // Dialog
+
     dialog.classList.add("bg-emerald-500/[.50]", "p-10", "rounded")
 
     // Form 
@@ -25,8 +28,8 @@ function newProject(d) {
 
     cD.textContent = "Close"
     cD.classList.add("border-2", "rounded-full", "px-3", "py-1", "hover:scale-110")
-    add.classList.add("border-2", "rounded-full", "px-3", "py-1", "hover:scale-110")
     add.textContent = "Add"
+    add.classList.add("border-2", "rounded-full", "px-3", "py-1", "hover:scale-110")
 
     // Append Section
 
@@ -39,16 +42,16 @@ function newProject(d) {
     dialog.appendChild(form)
     dialog.appendChild(buttonDiv)
 
+    // Event Listener Section
     cD.addEventListener("click", () => {
+        dialog.classList.remove("bg-emerald-500/[.50]")
         dialog.close()
     })
 
     add.addEventListener("click", () => {
-        let nameInput = name[1].value
-        let colorInput = color[1].value
-
-
-        console.log(`- - ${nameInput} - - ${colorInput} - - `)
+        // Project Add To Local Storage
+        // Name, Color
+        addProject(name[1], color[1])
 
     })
 

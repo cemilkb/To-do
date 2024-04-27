@@ -1,5 +1,8 @@
-import { createInput } from "./makeInput"
-function deneme(d) {
+import { createInput, createSelect } from "./makeInput"
+import { localKey } from "./localStorage"
+import { addTask } from "./addTask"
+
+function newTask(d) {
 
     const dialog = d
 
@@ -9,14 +12,16 @@ function deneme(d) {
     const task = createInput("task-input", "text", "Task")
     const due = createInput("due", "date", "Due")
     const summary = createInput("task", "text", "Summary")
-    const priority = createInput("task", "text", "Priorty")
-    const project = createInput("task", "text", "Project")
+
+    const priority = createSelect("Priorty")
+    const project = createSelect("Project")
 
     const buttonDiv = document.createElement("div")
     const cD = document.createElement("button")
     const add = document.createElement("button")
 
     // Dialog
+
     dialog.classList.add("bg-red-500/[.50]", "p-10", "rounded")
 
     // Form 
@@ -33,6 +38,26 @@ function deneme(d) {
 
     project[0].classList.add("col-span-2", "w-[50%]", "m-auto")
 
+    // Options For Projects
+
+    function option(value) {
+        const option = document.createElement("option")
+        option.setAttribute("value", value)
+        option.textContent = value
+
+        return option
+    }
+
+    for (let i = 0; i < localStorage.length; i++) {
+        project[1].appendChild(option(localKey[i]))
+    }
+
+    // Options For Priorty
+
+    priority[1].appendChild(option("High"))
+    priority[1].appendChild(option("Medium"))
+    priority[1].appendChild(option("Low"))
+
     // Append Section
 
     form.appendChild(task[0])
@@ -47,7 +72,10 @@ function deneme(d) {
     dialog.appendChild(form)
     dialog.appendChild(buttonDiv)
 
+    // Event Listener
+
     cD.addEventListener("click", () => {
+        dialog.classList.remove("bg-red-500/[.50]")
         dialog.close()
     })
 
@@ -55,14 +83,14 @@ function deneme(d) {
         let taskInput = task[1].value
         let dueInput = due[1].value
         let summaryInput = summary[1].value
-        let priorityInput = priority[1].value
-        let projectInput = project[1].value
+        let priorityInput = priority.value
+        let projectInput = project.value
 
-
-        console.log(`${taskInput} - - ${dueInput} - - ${summaryInput} - - ${priorityInput} - - ${projectInput} `)
+        // Task, Due, Sumamry, Priorty, Project
+        addTask(task[1], due[1], summary[1], priority[1], project[1])
 
     })
 
 }
 
-export { deneme }
+export { newTask }
